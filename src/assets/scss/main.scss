@@ -1,1 +1,18 @@
-$base-color: red;
+@import './partials/colors.scss';
+@import './partials/typo.scss';
+@import './partials/mixins.scss';
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  @include font-size(1.6);
+  margin: 0;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $c-grey-ligth;
+}

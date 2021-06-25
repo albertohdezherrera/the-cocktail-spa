@@ -2,7 +2,9 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     {{ status }}
-    {{ beersList.length }}
+    <template v-if="status === 'SUCCESS'">
+      {{ beersList.length }}
+    </template>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
