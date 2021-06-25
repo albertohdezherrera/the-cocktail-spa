@@ -1,38 +1,39 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    {{ status }}
-    <template v-if="status === 'SUCCESS'">
-      {{ beersList.length }}
-    </template>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="home--header">
+      <SectionTitle class="mt2 mb2">HOTEL <b>{{ content.name }}</b></SectionTitle>
+    </div>
+    <div class="home--comparator">
+      <Comparator :options="content.options" />
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import SectionTitle from '@/components/common/SectionTitle.vue';
+import Comparator from '@/components/Comparator/Comparator.vue';
+
+// Content
+import myContent from '@/assets/content/content.json';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    SectionTitle,
+    Comparator,
   },
   data() {
     return {
-      status: 'LOADING',
-      beersList: undefined,
+      content: myContent,
     };
-  },
-  async created() {
-    const { $axios } = this;
-    try {
-      const result = await $axios.get('https://api.punkapi.com/v2/beers');
-      this.beersList = result.data.slice(0, 10);
-      this.status = 'SUCCESS';
-    } catch (e) {
-      this.status = 'ERROR';
-    }
   },
 };
 </script>
+
+<style lang="scss">
+.home {
+  &--header {
+    margin: 4rem 0;
+  }
+}
+</style>

@@ -22,7 +22,6 @@ export default {
   header,
   main {
     max-width: 90%;
-    margin: 0 auto;
   }
   header {
     display: flex;
@@ -30,6 +29,7 @@ export default {
     padding: 0 2rem;
     background: $c-white;
     box-shadow: 0 1px 2px 0 #505C7733;
+    margin: 0 auto;
     margin-bottom: 5rem;
   }
 </style>

@@ -1,0 +1,50 @@
+{
+  "name": "Mieres del Camín Apartamentos",
+  "stars": 5,
+  "options": [
+    {
+      "title": "Solo Alojamiento",
+      "sellingPoints": [
+        "Sin régimen",
+        "Botella de agua de bienvenida"
+      ]
+    },
+    {
+      "title": "Alojamiento y Desayuno",
+      "sellingPoints": [
+        "Desayuno buffet completo"
+      ]
+    },
+    {
+      "title": "Media Pensión",
+      "sellingPoints": [
+        "Desayuno buffet completo",
+        "Cena buffet",
+        "No incluye"
+      ]
+    },
+    {
+      "title": "Todo incluido",
+      "sellingPoints": [
+        "Dispondrás de comida y bebida todo el día y durante toda tu estancia.",
+        "Restaurante buffet",
+        "Snack Bar",
+        "Servicio de bares (marcas nacionales)"
+      ]
+    },
+    {
+      "title": "Unlimited Services",
+      "sellingPoints": [
+        "Restaurante buffet con bebidas Premium.",
+        "Restaurante a la carta (una cena por estancia)",
+        "Snack Bar con bebidas Premium",
+        "Minibar incluido",
+        "Acceso a SPA y 45 minutos de masaje por persona",
+        "Actividades deportivas (acuáticas sin motor)",
+        "Caja fuerte",
+        "Parking gratuito",
+        "Lavandería"
+      ]
+    }
+  ]
+}
