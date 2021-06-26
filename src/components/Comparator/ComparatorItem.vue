@@ -13,12 +13,12 @@
         </li>
       </ul>
     </div>
-    <div class="comparator-item__selector">
+    <div
+      :class="['comparator-item__selector', isActive ? 'comparator-item__selector--active' : '']">
       <input
         :id="index"
         :checked="isActive"
-        type="checkbox"
-        @change="check()">
+        type="checkbox">
       <label :for="index">
         Elegir Regimen
       </label>
@@ -123,7 +123,7 @@ export default {
       position: absolute;
       left: -100rem;
     }
-    input[type=checkbox] + label {
+    label {
       display: block;
       position: relative;
       background-color: $c-grey-ligth;
@@ -143,7 +143,7 @@ export default {
         border-radius: 50%;
       }
     }
-    input[type=checkbox]:checked + label {
+    &.comparator-item__selector--active label {
       color: $c-primary-dark;
       &::before {
         content: "";
