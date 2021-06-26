@@ -2,6 +2,7 @@
 @import './partials/typo.scss';
 @import './partials/mixins.scss';
 @import './partials/misc.scss';
+@import './partials/media-query.scss';
 
 html {
   font-size: 62.5%;
@@ -24,4 +25,9 @@ body {
 
 main {
   margin: 0 auto;
+}
+
+p {
+  margin-top: 0;
+  @include line-height(2);
 }

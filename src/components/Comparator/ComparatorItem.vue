@@ -1,5 +1,8 @@
 <template>
-  <div :class="['comparator-item', isActive ? 'comparator-item--active' : '']">
+  <div
+    :class="['comparator-item', isActive ? 'comparator-item--active' : '']"
+    @click="check()"
+  >
     <div class="comparator-item__content">
       <h3 class="comparator-item__content__title">
         {{ content.title }}
@@ -60,6 +63,7 @@ export default {
   border: 1px solid $c-primary-ligth;
   transition: all ease 0.2s;
   background-color: $c-white;
+  cursor: pointer;
   &.comparator-item--active {
     border: 1px solid $c-primary;
     .comparator-item__selector {

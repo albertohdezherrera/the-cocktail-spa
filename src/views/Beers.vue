@@ -1,28 +1,67 @@
 <template>
-  <div>
-    <h1>{{ status }}</h1>
-    {{ beersList }}
+  <div class="beers">
+    <div class="beers__title">
+      <h1>Bebidas</h1>
+    </div>
+    <div class="beers__content">
+      <h2 class="beers__content__title">
+        Cervezas
+      </h2>
+      <template v-if="beers.status === 'LOADING'">
+        <h1>Cargando</h1>
+      </template>
+      <template v-else-if="beers.status === 'SUCCESS'">
+        <Beer v-for="beer in beers.list" :key="beer.name" :beer="beer" />
+      </template>
+      <template v-else>
+        <h1>Error</h1>
+      </template>
+    </div>
   </div>
 </template>
 
 <script>
+import { onMounted, reactive } from 'vue';
+import getBeers from '@/services/getBeers';
+import Beer from '@/components/Beer/Beer.vue';
+
 export default {
   name: 'Beers',
-  data() {
-    return {
-      status: 'LOADING',
-      beersList: undefined,
-    };
+  components: {
+    Beer,
   },
-  async created() {
-    const { $axios } = this;
-    try {
-      const result = await $axios.get(`${process.env.VUE_APP_API_URL}/beers`);
-      this.beersList = result.data.slice(0, 10);
-      this.status = 'SUCCESS';
-    } catch (e) {
-      this.status = 'ERROR';
-    }
+  setup() {
+    const beers = reactive({
+      status: 'LOADING',
+      list: undefined,
+    });
+
+    const { getFirstBeers } = getBeers();
+
+    onMounted(async () => {
+      try {
+        beers.list = await getFirstBeers();
+        beers.status = 'SUCCESS';
+      } catch (e) {
+        beers.status = 'ERROR';
+      }
+    });
+    return {
+      beers,
+    };
   },
 };
 </script>
+
+<style lang="scss">
+.beers {
+  &__title {
+    padding: 0.5rem 1rem 2rem 2rem;
+  }
+  &__content {
+    border: 1px solid $c-border;
+    background-color: $c-white;
+    padding: 2rem;
+  }
+}
+</style>
