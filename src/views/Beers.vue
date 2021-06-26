@@ -57,11 +57,21 @@ export default {
 .beers {
   &__title {
     padding: 0.5rem 1rem 2rem 2rem;
+    h1 {
+      @include font-size(2.4);
+      color: $c-primary-ligth;
+      font-family: $f-secondary;
+    }
   }
   &__content {
     border: 1px solid $c-border;
     background-color: $c-white;
     padding: 2rem;
+    &__title {
+      @include font-size(2.4);
+      color: $c-primary-ligth;
+      font-family: $f-secondary;
+    }
   }
 }
 </style>
