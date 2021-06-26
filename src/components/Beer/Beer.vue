@@ -47,6 +47,7 @@ export default {
   &__abv {
     position: absolute;
     width: 20%;
+    max-width: 12rem;
     top: 1rem;
     right: 0;
     padding: .5rem 1rem;
