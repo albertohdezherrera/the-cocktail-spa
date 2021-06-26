@@ -23,6 +23,9 @@ export default {
   main {
     max-width: 90%;
   }
+  #app {
+    padding-bottom: 1rem;
+  }
   header {
     display: flex;
     justify-content: flex-end;

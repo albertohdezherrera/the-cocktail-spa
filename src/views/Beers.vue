@@ -8,7 +8,7 @@
         Cervezas
       </h2>
       <template v-if="beers.status === 'LOADING'">
-        <h1>Cargando</h1>
+        <Loader />
       </template>
       <template v-else-if="beers.status === 'SUCCESS'">
         <Beer v-for="beer in beers.list" :key="beer.name" :beer="beer" />
@@ -24,11 +24,13 @@
 import { onMounted, reactive } from 'vue';
 import getBeers from '@/services/getBeers';
 import Beer from '@/components/Beer/Beer.vue';
+import Loader from '@/components/common/Loader.vue';
 
 export default {
   name: 'Beers',
   components: {
     Beer,
+    Loader,
   },
   setup() {
     const beers = reactive({
