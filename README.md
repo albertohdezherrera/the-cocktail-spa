@@ -1,6 +1,6 @@
 # The Cocktail SPA Test
 
-## Instalar el proyecto:
+### Instalar el proyecto:
 ```
 npm install
 ```
