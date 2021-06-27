@@ -1,21 +1,26 @@
 # The Cocktail SPA Test
 
-## Instalar el proyecto
+## Instalar el proyecto:
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Crear server dev
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Crear build 
 ```
 npm run build
 ```
 
-### Run your unit tests
+### Crear build y un server donde ver
+```
+npm run build-local
+```
+
+### Run unit test
 ```
 npm run test:unit
 ```

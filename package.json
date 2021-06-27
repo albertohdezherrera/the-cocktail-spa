@@ -6,14 +6,15 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-local": "vue-cli-service build && serve -s dist"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "postcss-preset-env": "^6.7.0",
     "vue": "^3.1.2",
-    "vue-router": "^4.0.0-0",
-    "postcss-preset-env": "^6.7.0"
+    "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -32,7 +33,8 @@
     "postcss-loader": "^6.1.0",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3",
-    "vue-jest": "^5.0.0-0"
+    "vue-jest": "^5.0.0-0",
+    "serve": "^12.0.0"
   },
   "eslintConfig": {
     "root": true,
