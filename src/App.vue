@@ -21,18 +21,24 @@ export default {
 <style lang="scss">
   header,
   main {
-    max-width: 90%;
+    padding: 2rem;
+    @media (min-width: $mq-tablet) {
+      width: 90%;
+      padding: 0;
+    }
   }
   #app {
     padding-bottom: 1rem;
   }
   header {
-    display: flex;
-    justify-content: flex-end;
     padding: 0 2rem;
     background: $c-white;
     box-shadow: 0 1px 2px 0 #505C7733;
     margin: 0 auto;
-    margin-bottom: 5rem;
+    @media (min-width: $mq-tablet) {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 3rem;
+    }
   }
 </style>
