@@ -5,22 +5,22 @@
 npm install
 ```
 
-### Crear server dev
+### Crear server dev:
 ```
 npm run serve
 ```
 
-### Crear build 
+### Crear build:
 ```
 npm run build
 ```
 
-### Crear build y un server donde ver
+### Crear build y un server donde ver:
 ```
 npm run build-local
 ```
 
-### Run unit test
+### Run unit test:
 ```
 npm run test:unit
 ```
