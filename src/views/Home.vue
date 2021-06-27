@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="home--header">
-      <SectionTitle class="mt2 mb2 mr2">HOTEL <b>{{ content.name }}</b></SectionTitle>
+      <SectionTitle class="home--header__title">HOTEL <b>{{ content.name }}</b></SectionTitle>
       <StarsRate :stars="content.stars" />
     </div>
     <div class="home--comparator">
@@ -38,9 +38,20 @@ export default {
   margin-bottom: 4rem;
   &--header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 4rem 0;
+    &__title{
+      width: 100%;
+    }
+    @media (min-width: $mq-tablet) {
+      flex-wrap: nowrap;
+      &__title{
+        width: auto;
+        margin-right: 2rem;
+      }
+    }
   }
 }
 </style>

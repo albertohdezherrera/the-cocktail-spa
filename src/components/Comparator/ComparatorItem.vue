@@ -56,14 +56,20 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 17%;
-  margin: 0 1%;
+  width: 100%;
+  margin-bottom: 2rem;
   padding: 1rem;
   border-radius: 2px;
   border: 1px solid $c-primary-ligth;
   transition: all ease 0.2s;
   background-color: $c-white;
   cursor: pointer;
+  @media (min-width: $mq-tablet) {
+    width: 49%;
+  }
+  @media (min-width: $mq-desktop) {
+    width: 19%;
+  }
   &.comparator-item--active {
     border: 1px solid $c-primary;
     .comparator-item__selector {

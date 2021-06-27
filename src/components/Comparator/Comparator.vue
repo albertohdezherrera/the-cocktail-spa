@@ -45,8 +45,8 @@ export default {
 <style lang="scss">
 .comparator {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
   max-width: 150rem;
   margin: 0 auto;
   margin-bottom: 2rem;
